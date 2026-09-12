@@ -30,8 +30,9 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          # GitHub Pages 项目站点的 base 路径为 /<仓库名>/
-          VITE_BASE: /${{ github.event.repository.name }}/
+          # 使用自定义域名（tdwc.luomor.com）时站点挂在根路径
+          # 若改用 <用户名>.github.io/<仓库名> 访问，改为 /${{ github.event.repository.name }}/
+          VITE_BASE: /
 
       - uses: actions/configure-pages@v5
         with:

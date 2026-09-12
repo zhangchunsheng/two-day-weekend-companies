@@ -59,11 +59,11 @@ updated: 2026-09-01
 
 ## 部署到 GitHub Pages
 
-1. 仓库 **Settings → Pages → Source** 选择 **GitHub Actions**
+1. 仓库 **Settings → Pages → Source** 选择 **GitHub Actions**（工作流中的 `enablement: true` 也可自动启用）
 2. 推送到 `main` 分支，工作流会自动构建并部署
-3. 站点地址为 `https://<用户名>.github.io/<仓库名>/`
+3. 默认使用自定义域名 `tdwc.luomor.com`（见 `public/CNAME`），构建 base 为 `/`
 
-如果你的仓库名不同，无需修改任何配置——工作流会自动使用仓库名作为 base 路径。
+如果改用 `<用户名>.github.io/<仓库名>` 访问：删除 `public/CNAME`，并把工作流里的 `VITE_BASE` 改为 `/${{ github.event.repository.name }}/`。
 
 ## License
 
