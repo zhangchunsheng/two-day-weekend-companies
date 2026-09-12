@@ -1,4 +1,4 @@
-# 双休企业名录（Two-Day Weekend Companies）
+# 双休购，双休企业名录（Two-Day Weekend Companies）
 
 > 双休是老百姓的基本权利。
 

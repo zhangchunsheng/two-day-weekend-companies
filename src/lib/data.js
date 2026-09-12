@@ -59,17 +59,22 @@ const files = import.meta.glob('../../data/**/*.md', {
   eager: true,
 })
 
+const locations = []
 export const companies = Object.entries(files).flatMap(([path, raw]) => {
   const { meta, body } = parseFrontmatter(raw)
+  if (meta.province && meta.city) {
+    locations.push({ province: meta.province, city: meta.city })
+  }
   return parseCompanies(body, meta, path.replace(/^.*\/data\//, 'data/'))
 })
 
-export const provinces = [...new Set(companies.map((c) => c.province))].sort()
+// 省市列表来自所有数据文件（包括还没有收录企业的城市）
+export const provinces = [...new Set(locations.map((l) => l.province))].sort()
 
 export function citiesOf(province) {
   return [
     ...new Set(
-      companies.filter((c) => !province || c.province === province).map((c) => c.city),
+      locations.filter((l) => !province || l.province === province).map((l) => l.city),
     ),
   ].sort()
 }
