@@ -34,6 +34,9 @@ jobs:
           VITE_BASE: /${{ github.event.repository.name }}/
 
       - uses: actions/configure-pages@v5
+        with:
+          # 仓库尚未启用 Pages 时自动创建并启用（build_type 为 workflow）
+          enablement: true
 
       - uses: actions/upload-pages-artifact@v3
         with:
