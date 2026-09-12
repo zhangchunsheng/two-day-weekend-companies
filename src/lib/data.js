@@ -19,10 +19,12 @@ function parseFrontmatter(text) {
 
 // 解析正文：每个 `## 企业名称` 一节，下面用 `- 字段：值` 描述
 function parseCompanies(body, meta, file) {
+  // 先剔除 HTML 注释（空模板里的填写示例写在注释中，不应被解析）
+  const content = body.replace(/<!--[\s\S]*?-->/g, '')
   const companies = []
   let current = null
 
-  for (const rawLine of body.split(/\r?\n/)) {
+  for (const rawLine of content.split(/\r?\n/)) {
     const line = rawLine.trim()
     const heading = line.match(/^##\s+(.+)$/)
     if (heading) {
