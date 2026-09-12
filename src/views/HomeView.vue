@@ -112,7 +112,11 @@ const stats = computed(() => ({
             {{ c.schedule || '双休' }}
           </span>
         </div>
-        <p class="mt-1 text-sm text-slate-500">{{ c.province }} · {{ c.city }}<template v-if="c.industry"> · {{ c.industry }}</template></p>
+        <p class="mt-1 text-sm text-slate-500">
+          <template v-if="c.province && c.city">{{ c.province }} · {{ c.city }} · </template>
+          <template v-else>全国性企业 · </template>
+          {{ c.industry || '行业未注明' }}
+        </p>
         <p v-if="c.note" class="mt-3 text-sm text-slate-600 leading-relaxed">{{ c.note }}</p>
         <div class="mt-4 flex items-center justify-between text-xs text-slate-400">
           <a
