@@ -17,7 +17,7 @@ import { RouterView, RouterLink } from 'vue-router'
           <RouterLink to="/" class="hover:text-emerald-600 transition-colors">企业查询</RouterLink>
           <RouterLink to="/contribute" class="hover:text-emerald-600 transition-colors">提交数据</RouterLink>
           <a
-            href="https://github.com/luomor/two-day-weekend-companies"
+            href="https://github.com/zhangchunsheng/two-day-weekend-companies"
             target="_blank"
             rel="noopener"
             class="inline-flex items-center gap-1 rounded-lg bg-slate-900 text-white px-3 py-1.5 hover:bg-slate-700 transition-colors"
@@ -40,7 +40,7 @@ import { RouterView, RouterLink } from 'vue-router'
         <p>数据由社区共同维护，仅供参考 · 如有错误欢迎提交 PR 修正</p>
         <p>
           <a
-            href="https://github.com/luomor/two-day-weekend-companies/blob/main/LICENSE"
+            href="https://github.com/zhangchunsheng/two-day-weekend-companies/blob/main/LICENSE"
             target="_blank"
             rel="noopener"
             class="hover:text-emerald-600"

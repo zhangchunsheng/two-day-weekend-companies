@@ -124,7 +124,7 @@ const stats = computed(() => ({
           >信息来源 ↗</a>
           <span v-else></span>
           <a
-            :href="`https://github.com/luomor/two-day-weekend-companies/edit/main/${c._file}`"
+            :href="`https://github.com/zhangchunsheng/two-day-weekend-companies/edit/main/${c._file}`"
             target="_blank"
             rel="noopener"
             class="hover:text-slate-600"

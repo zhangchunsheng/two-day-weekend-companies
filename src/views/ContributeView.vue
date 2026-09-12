@@ -36,7 +36,7 @@ updated: 2026-09-01
           如果你的城市还没有文件，新建一个即可。
         </p>
         <a
-          href="https://github.com/luomor/two-day-weekend-companies/new/main/data"
+          href="https://github.com/zhangchunsheng/two-day-weekend-companies/new/main/data"
           target="_blank"
           rel="noopener"
           class="inline-block mt-3 rounded-lg bg-emerald-600 text-white text-sm px-4 py-2 hover:bg-emerald-700 transition-colors"
