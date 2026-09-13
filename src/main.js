@@ -10,6 +10,8 @@ const router = createRouter({
   routes: [
     { path: '/', name: 'home', component: HomeView },
     { path: '/contribute', name: 'contribute', component: ContributeView },
+    // 兜底：未匹配的路径（如 Google AdSense 广告的 #/google_vignette 锚点）回到首页，避免空白页
+    { path: '/:pathMatch(.*)*', redirect: '/' },
   ],
 })
 
